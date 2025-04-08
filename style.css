@@ -98,3 +98,17 @@ footer {
   justify-content: center;
   gap: 10px;
 }
+
+@font-face {
+    font-family: 'Aptos Mono';
+    src: url('../fonts/aptos-mono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pixelify sans';
+    src: url('../fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
