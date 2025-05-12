@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolme Pelimaailman Helmeä</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kolme Pelimaailman Helmeä</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li id="sivut"><a href="index.html">Etusivu</a></li>
+        <li id="sivut"><a href="pelit.html">Pelit</a></li>
+        <li id="sivut"><a href="arvostelut.html">Arvostelut</a></li>
+      </ul>
+
+<br><br><br><br>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="carousel_pics/lake2.png" style="width:900px">
+      <div class="text">Lake on näistä kolmesta pelistä se, mistä olin eniten yllättynyt. Sain pelin
+        alennuksessa ja ajattelin kokeilla sitä. Ensisilmäyksellä peli oli hyvin yksinkertainen ja
+        toistuva ja postin jakelu oli välillä jopa tylsää. Mutta kun seurasi tarinaa enemmän ja pääsi
+        tutustumaan kaikkiin pelin sivuhahmoihin ja rakentamaan suhteuta heihin, niin peli alkoi herätä henkiin.
+        Yhtäkkiä olin aivan sisäistynyt tarinaan ja maailmaan ja pelaaminen alkoi tuntua rauhalliselta ja 
+        todenmukaiselta elämältä pienessä kylässä. Vaikka läpäisin pelin alle 8 tunnissa, niin se jäi positiivisesti 
+        mieleeni.
+    </div>
+    <div class="small-text">3.5/5
+    </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="carousel_pics/sable2.png" style="width:900px">
+      <div class="text">Sable oli myös yllättävä kokemus. Olin tosin ennen pelaamista jo kiinnostunut, koska 
+        rakastuin heti pelin visuaaliseen ilmeeseen ja musiikkiin, jotka havaitsin trailerissa. Tässä pelissä en ollut 
+        niin uppoutunut tarinaan, mutta sen sijaan pelin avoin maailma oli aivan omalla tasollaan. Tähän peliin 
+        käytin näistä kolmesta eniten aikaa, lähes 12 tuntia, vain tutkiakseni maailmaa ja löytämään kaikki salaisuudet.
+        Sivuhahmot olivat hyvin harvoja ja se loi tunteen, että olit maailmassa todellakin lähes yksin. Sable sopii juuri 
+        kaikille, jotka nauttivat tuntemattoman tutkimisesta ja mysteereistä.
+    </div>
+    <div class="small-text">4.5/5
+    </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="carousel_pics/fez2.jpg" style="width:900px">
+      <div class="text">Fez on näistä kolmesta pelistä ehdottomasti eriskummallisin. Fez ottaa videopelien mysteerit
+         ja vaikeat pulmat ja nostaa ne aivan älyttömälle tasolle. Ensimmäiseksi 
+        silmään pisti tietysti pelin taiteellinen ja retro ulkoasu, mutta heti ensimmäisissä pulmissa jouduin pysähtymään 
+        miettimään pitkäksi aikaa. Monessa pulmassa jouduin jopa seuraamaan pitkiä ohjeita netistä ja jopa kääntämään kryptistä 
+        salakieltä, mutta silti peli ei tuntunut ärsyttävältä tai liian vaikealta, päinvastoin. Jos nauttii pulmien ratkomisesta, niin 
+        Fez tekee sen paremmin kuin mikään muu peli.
+      </div>
+    <div class="small-text">4/5
+    </div>
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <br><br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+<br>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+      <footer>
+        <p>Copyright &copy; Jerry Sjövall</p>
+      </footer>
+    
+  </body>
+</html>

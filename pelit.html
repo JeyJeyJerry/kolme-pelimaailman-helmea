@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolme Pelimaailman Helmeä</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Kolme Pelimaailman Helmeä</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li id="sivut"><a href="index.html">Etusivu</a></li>
+        <li id="sivut"><a href="pelit.html">Pelit</a></li>
+        <li id="sivut"><a href="arvostelut.html">Arvostelut</a></li>
+      </ul>
+
+<br><br><br><br>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="carousel_pics/lake1.jpg" style="width:900px">
+      <div class="text">Lake on rauhallinen seikkailupeli, jonka on kehittänyt Gamious. Peli sijoittuu vuoteen 1986 ja 
+        kertoo tarinan Meredith Weissistä, joka palaa kiireisestä ohjelmoijatyöstään kotikaupunkiinsa Providence Oaksiin 
+        Oregonissa. Hän ottaa kahden viikon tauon töistään ja ryhtyy sijaiseksi postinkantajaksi isänsä puolesta. Pelaaja 
+        seuraa Meredithin elämää tämän lomajakson aikana, jakaa postia, tapaa tuttuja ja uusia ihmisiä sekä tekee valintoja, 
+        jotka vaikuttavat tarinan kulkuun.</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="carousel_pics/sable1.jpg" style="width:900px">
+      <div class="text">Sable on seikkailupeli, jonka on kehittänyt Shedworks. Peli seuraa nuorta tyttöä nimeltä Sable, joka
+         lähtee yksin rituaalimatkalleen halki aavikkomaailman nimeltä Midden. Tämä matka, jota kutsutaan nimellä "Gliding", 
+         on aikuistumisriitti, jonka aikana Sable etsii omaa paikkaansa yhteisössään. Pelaaja tutkii avointa maailmaa, kiipeilee
+          raunioissa, ratkoo kevyitä pulmia ja tutustuu erilaisiin kulttuureihin ja hahmoihin.</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="carousel_pics/fez1.jpg" style="width:900px">
+      <div class="text">Fez on tasohyppelypeli, jonka on kehittänyt indie-studio Polytron Corporation. Peli 
+        kertoo pienestä olennosta nimeltä Gomez, joka elää kaksiulotteisessa maailmassa. Hänen elämänsä muuttuu, kun hän saa 
+        mystisen fez-hatun, joka paljastaa kolmannen ulottuvuuden. Pelaajan tehtävänä on auttaa Gomezia tutkimaan maailmaa, 
+        ratkaisemaan pulmia ja keräämään kultaisia kuutioita palauttaakseen universumin tasapainon.</div>
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <br><br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+<br>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+      <footer>
+        <p>Copyright &copy; Jerry Sjövall</p>
+      </footer>
+    
+  </body>
+</html>
